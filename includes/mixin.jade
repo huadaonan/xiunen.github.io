@@ -1,0 +1,11 @@
+mixin navbar(page)
+  .navbar.navbar-fixed-top
+    .clearfix
+      .pull-left.inline.navbar-brand 
+        | Abot Chen
+      ul.nav.navbar-nav
+        each item in [{name: "Home", url: '/'}, {name: "Blogs", url: '/pages/blog.html'}, {name: "Examples", url: '/pages/example.html'},{name: "About me", url: '/pages/about.html'}]
+          li(class="#{item.name == page?'active':''}")
+            a(href=item.url)= item.name
+        li
+          a(href="http://click.dji.com/ztQimRjTyML7PDRV?pm=link",target="_blank") BUY DJI UAV
